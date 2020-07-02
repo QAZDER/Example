@@ -8,6 +8,7 @@ import com.google.android.material.snackbar.Snackbar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import android.view.Gravity;
 import android.view.View;
 
 import android.view.Menu;
@@ -31,7 +32,9 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, R.string.toast_message, Toast.LENGTH_LONG).show();
+                Toast toast = Toast.makeText(MainActivity.this, R.string.toast_message, Toast.LENGTH_LONG);
+                toast.setGravity(Gravity.TOP, 10, 10);
+                toast.show();
             }
         });
 
